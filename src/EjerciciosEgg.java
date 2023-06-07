@@ -13,7 +13,7 @@ public class EjerciciosEgg {
         //Ejercicio6ParImpar.ejecutar();
         //Ejercicio7Eureka.ejecutar();
         Ejercicio8Length.ejercutar();
-
+        Ejercicio9EmpezaPorA.ejercutar();
 
     }
 }

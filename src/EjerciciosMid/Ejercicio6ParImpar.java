@@ -11,7 +11,11 @@ public class Ejercicio6ParImpar {
     public static void ejecutar(){
         Escribir.conSalto("Escribe un número entero: ");
         int num = Leer.entero();
-        Escribir.conSalto(num % 2 == 0 ? "Es par.": "Es impar.");
+        Escribir.conSalto(esParOImpar(num));
 
+    }
+
+    public static String esParOImpar(int num){
+        return num % 2 == 0 ? "Es par.": "Es impar.";
     }
 }

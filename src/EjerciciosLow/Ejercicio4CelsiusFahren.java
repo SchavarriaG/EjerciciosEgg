@@ -10,9 +10,11 @@ public class Ejercicio4CelsiusFahren {
         Escribir.conSalto("Ejercicio 4:");
         Escribir.conSalto("Ingresa la temperatura actual en grados Celsius (C): ");
         int gradosCelsius = Leer.entero();
-        double gradosFahrenheit =  32 + ( gradosCelsius * 1.8);
-        //Escribir.conSalto("La temperatura es: " + 32 + (9 * gradosCelsius /5));
-        Escribir.conSalto("La temperatura en grados Fahrenheit (F) es: " + gradosFahrenheit);
+        Escribir.conSalto("La temperatura en grados Fahrenheit (F) es: " + calcularFahrenheit(gradosCelsius));
 
+    }
+
+    public static double calcularFahrenheit(int gradosCelsius){
+        return 32 + ( gradosCelsius * 1.8);
     }
 }

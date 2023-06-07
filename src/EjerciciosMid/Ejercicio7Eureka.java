@@ -13,7 +13,10 @@ public class Ejercicio7Eureka {
     public static void ejecutar(){
         Escribir.conSalto("Ingresa una frase: ");
         String frase = Leer.caracter();
-        Escribir.conSalto("eureka".equals(frase.toLowerCase())? "Correcto" : "Incorrecto");
+        Escribir.conSalto(eurekaCheck(frase));
     }
 
+    public static String eurekaCheck (String frase){
+        return "eureka".equalsIgnoreCase(frase)? "Correcto" : "Incorrecto";
+    }
 }
