@@ -2,14 +2,14 @@ package Utils;
 
 import java.util.Scanner;
 
-public class Leer {
+public class Read {
     static Scanner scanner = new Scanner(System.in);
 
-    public static int entero(){
+    public static int integer(){
         return scanner.nextInt();
     }
 
-    public static String caracter(){
+    public static String text(){
         return scanner.nextLine();
     }
 
