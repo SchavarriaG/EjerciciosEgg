@@ -1,7 +1,4 @@
-import Entity.Circunferencia;
-import Entity.Libro;
-import Entity.Operacion;
-import Entity.Person;
+import Entity.*;
 import Service.LibroService;
 import Service.PersonService;
 import Utils.Write;
@@ -21,10 +18,13 @@ public class Main {
         //personService.getPersonName(persona3);
 
         //Ejercicio 1
+        // Creación de objeto por medio del servicio
+        /*
         LibroService libroService = new LibroService();
         Libro libro1 = libroService.cargarLibro();
         libroService.verLibro(libro1);
 
+        // Creación de objeto por medio del servicio pero con método estático
         Libro libro2 = LibroService.cargarLibroEstatico();
         LibroService.verLibroEstatico(libro2);
 
@@ -40,5 +40,12 @@ public class Main {
         Write.withLineBreak("La resta de los números es "  + operacion1.restar());
         Write.withLineBreak("La multiplicación de los números es "  + operacion1.multiplicar());
         Write.withLineBreak("La división de los números es "  + operacion1.dividir());
+        */
+
+        //Ejercicio 4
+        Rectangulo rectangulo1 = Rectangulo.crearRectangulo();
+        Write.withLineBreak("La superficie del rectángulo es: " + rectangulo1.calcularSuperficie());
+        Write.withLineBreak("El perímetro del rectángulo es: " + rectangulo1.calcularPerimetro());
+        rectangulo1.dibujarRectangulo();
     }
 }
