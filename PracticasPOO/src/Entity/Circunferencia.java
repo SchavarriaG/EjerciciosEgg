@@ -6,13 +6,17 @@ import Utils.Write;
 public class Circunferencia {
     private double radio;
 
+    public Circunferencia(){
+
+    }
     public Circunferencia(double radio){
         this.radio = radio;
     }
 
-    public Circunferencia crearCircunferencia(){
+    public void crearCircunferencia(){
         Write.withLineBreak("Ingresa el radio de la circunferencia");
-        return new Circunferencia(Read.decimal());
+        radio = Read.decimal();
+        //setRadio(Read.decimal());  Otra forma
     }
     public double calcularArea(){
         return Math.PI * Math.pow(radio, 2);

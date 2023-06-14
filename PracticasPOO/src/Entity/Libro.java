@@ -35,4 +35,8 @@ public class Libro {
     public int getNumPaginas() {
         return numPaginas;
     }
+
+    public void setISBN(String codeISBN) {
+        this.codeISBN = codeISBN;
+    }
 }
