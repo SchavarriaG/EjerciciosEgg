@@ -1,4 +1,5 @@
 import Entity.*;
+import Utils.Read;
 import Utils.Write;
 
 public class Main {
@@ -47,7 +48,7 @@ public class Main {
         rectangulo1.dibujarRectangulo();*/
 
         //Ejercicio 5
-        Cuenta cuenta1 = Cuenta.crearCuenta();
+        /*Cuenta cuenta1 = Cuenta.crearCuenta();
         cuenta1.consultarDatos();
         cuenta1.consultarSaldo();
         Write.withLineBreak("Enviaste un ingreso de 1000$.");
@@ -57,6 +58,18 @@ public class Main {
         cuenta1.retirar(500);
         cuenta1.consultarSaldo();
         Write.withLineBreak("Enviaste un retiro rápido de 2000$.");
-        cuenta1.extraccionRapida(2000);
+        cuenta1.extraccionRapida(2000);*/
+
+        //Ejercicio 6
+        // Probar con los valores 200, 300  respectivamente para ver todas las funcionalidades
+        Cafetera cafetera1 = new Cafetera(1000,50);
+        cafetera1.vaciarCafetera();
+        Write.withLineBreak("Se llenará la cafetera.");
+        cafetera1.llenarCafetera();
+        Write.withLineBreak("Ingresa la cantidad de café que desea servir: ");
+        cafetera1.servirTaza(Read.integer());
+        Write.withLineBreak("Ingresa la cantidad de café que desea agregar: ");
+        cafetera1.agregarCafe(Read.integer());
+
     }
 }
