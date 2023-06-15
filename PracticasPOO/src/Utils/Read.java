@@ -9,6 +9,10 @@ public class Read {
         return scanner.nextInt();
     }
 
+    public static long integerLarge(){
+        return scanner.nextLong();
+    }
+
     public static String text(){
         return scanner.nextLine();
     }

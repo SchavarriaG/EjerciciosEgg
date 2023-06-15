@@ -1,6 +1,4 @@
 import Entity.*;
-import Service.LibroService;
-import Service.PersonService;
 import Utils.Write;
 
 public class Main {
@@ -43,9 +41,22 @@ public class Main {
         */
 
         //Ejercicio 4
-        Rectangulo rectangulo1 = Rectangulo.crearRectangulo();
+        /*Rectangulo rectangulo1 = Rectangulo.crearRectangulo();
         Write.withLineBreak("La superficie del rectángulo es: " + rectangulo1.calcularSuperficie());
         Write.withLineBreak("El perímetro del rectángulo es: " + rectangulo1.calcularPerimetro());
-        rectangulo1.dibujarRectangulo();
+        rectangulo1.dibujarRectangulo();*/
+
+        //Ejercicio 5
+        Cuenta cuenta1 = Cuenta.crearCuenta();
+        cuenta1.consultarDatos();
+        cuenta1.consultarSaldo();
+        Write.withLineBreak("Enviaste un ingreso de 1000$.");
+        cuenta1.ingresar(1000);
+        cuenta1.consultarSaldo();
+        Write.withLineBreak("Enviaste un retiro de 500$.");
+        cuenta1.retirar(500);
+        cuenta1.consultarSaldo();
+        Write.withLineBreak("Enviaste un retiro rápido de 2000$.");
+        cuenta1.extraccionRapida(2000);
     }
 }
