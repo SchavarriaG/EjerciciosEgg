@@ -62,14 +62,17 @@ public class Main {
 
         //Ejercicio 6
         // Probar con los valores 200, 300  respectivamente para ver todas las funcionalidades
-        Cafetera cafetera1 = new Cafetera(1000,50);
+        /*Cafetera cafetera1 = new Cafetera(1000,50);
         cafetera1.vaciarCafetera();
         Write.withLineBreak("Se llenará la cafetera.");
         cafetera1.llenarCafetera();
         Write.withLineBreak("Ingresa la cantidad de café que desea servir: ");
         cafetera1.servirTaza(Read.integer());
         Write.withLineBreak("Ingresa la cantidad de café que desea agregar: ");
-        cafetera1.agregarCafe(Read.integer());
+        cafetera1.agregarCafe(Read.integer());*/
+
+        //Ejercicio7
+
 
     }
 }
