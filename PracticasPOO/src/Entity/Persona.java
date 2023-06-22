@@ -1,21 +1,21 @@
 package Entity;
 
-import Enums.Sexo;
+import Enums.Genero;
 
 public class Persona {
     private String nombre;
     private int edad;
-    private Sexo sexo;
+    private Genero genero;
     private double peso;
     private int altura;
 
     public Persona() {
     }
 
-    public Persona(String nombre, int edad, Sexo sexo, double peso, int altura) {
+    public Persona(String nombre, int edad, Genero genero, double peso, int altura) {
         this.nombre = nombre;
         this.edad = edad;
-        this.sexo = sexo;
+        this.genero = genero;
         this.peso = peso;
         this.altura = altura;
     }
@@ -36,12 +36,12 @@ public class Persona {
         this.edad = edad;
     }
 
-    public Sexo getSexo() {
-        return sexo;
+    public Genero getGenero() {
+        return genero;
     }
 
-    public void setSexo(Sexo sexo) {
-        this.sexo = sexo;
+    public void setGenero(Genero genero) {
+        this.genero = genero;
     }
 
     public double getPeso() {
@@ -58,5 +58,16 @@ public class Persona {
 
     public void setAltura(int altura) {
         this.altura = altura;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", genero=" + genero +
+                ", peso=" + peso +
+                ", altura=" + altura +
+                '}';
     }
 }

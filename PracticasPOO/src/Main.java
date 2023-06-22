@@ -1,4 +1,5 @@
 import Entity.*;
+import Service.PersonaService;
 import Utils.Read;
 import Utils.Write;
 
@@ -72,6 +73,24 @@ public class Main {
         cafetera1.agregarCafe(Read.integer());*/
 
         //Ejercicio7
+        Write.withLineBreak("Ingresa la cantidad de personas que desea registrar: ");
+
+        Persona[] personas = new Persona[Read.integer()];
+
+        for (int i = 0; i< personas.length;i++){
+            personas[i] = PersonaService.crearPersona();
+            Write.withLineBreak("Se registró la persona: "+personas[i]);
+        }
+
+        for (Persona persona : personas){
+            Write.withLineBreak("Para "+persona.getNombre()+" :");
+            PersonaService.calcularIMC(persona);
+            if(PersonaService.esMayorDeEdad(persona)){
+                Write.withLineBreak("Es mayor de edad.");
+            }else {
+                Write.withLineBreak("Es menor de edad.");
+            }
+        }
 
 
     }

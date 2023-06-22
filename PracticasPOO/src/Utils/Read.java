@@ -6,7 +6,9 @@ public class Read {
     static Scanner scanner = new Scanner(System.in);
 
     public static int integer(){
-        return scanner.nextInt();
+        int value = scanner.nextInt();
+        scanner.nextLine();
+        return value;
     }
 
     public static long integerLarge(){
