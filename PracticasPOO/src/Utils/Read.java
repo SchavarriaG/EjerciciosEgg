@@ -3,12 +3,10 @@ package Utils;
 import java.util.Scanner;
 
 public class Read {
-    static Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in).useDelimiter("\n");
 
     public static int integer(){
-        int value = scanner.nextInt();
-        scanner.nextLine();
-        return value;
+        return scanner.nextInt();
     }
 
     public static long integerLarge(){

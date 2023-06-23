@@ -43,7 +43,7 @@ public class PersonaService {
         return Genero.values()[Integer.parseInt(genero)-1];
     }
 
-    public static void calcularIMC(Persona persona){
+    public static int calcularIMC(Persona persona){
         double imc = (persona.getPeso() / Math.pow((double)persona.getAltura()/100,2));
         //System.out.println(imc);
         //la importancia del manejo de tipos de datos
@@ -51,14 +51,14 @@ public class PersonaService {
         //System.out.println(Math.pow(persona.getAltura()/100,2));
         //System.out.println(Math.pow(((double)persona.getAltura())/100,2));
         if (imc < 20){
-            Write.withLineBreak("Estás por debajo de tu peso ideal.");
-            //return -1;
+            //Write.withLineBreak("Estás por debajo de tu peso ideal.");
+            return -1;
         }else if(imc >= 20 && imc <= 25){
-            Write.withLineBreak("Estás en tu peso ideal.");
-            //return 0;
+            //Write.withLineBreak("Estás en tu peso ideal.");
+            return 0;
         }else{
-            Write.withLineBreak("Tienes sobrepeso.");
-            //return 1;
+            //Write.withLineBreak("Tienes sobrepeso.");
+            return 1;
         }
     }
 
