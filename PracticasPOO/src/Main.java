@@ -114,7 +114,7 @@ public class Main {
         System.out.println("El porcentaje de personas con sobrepeso es " + (double) contadorSobrePeso / cantidadPersonas * 100 + "%" );*/
 
         //Ejercicio 8
-        Cadena cadena = new Cadena();
+        /*Cadena cadena = new Cadena();
         Write.withLineBreak("Ingrese la frase que desee: ");
         cadena.setFrase(Read.text());
 
@@ -139,7 +139,22 @@ public class Main {
         Write.withLineBreak("Ingresa el caracter que deseas buscar en la frase principal: ");
         caracter = Read.text();
         rta = (cadena.contiene(caracter)) ? "Sí": "No";
-        Write.withLineBreak("La cadena " + rta + " contiene el caracter " + caracter );
+        Write.withLineBreak("La cadena " + rta + " contiene el caracter " + caracter );*/
+
+        //Ejercicio 9
+        //Matematica matematica = new Matematica(Math.random(),Math.random());
+
+        double a = Math.random();
+        double b = Math.random();
+        Matematica.setNumA(a);
+        Matematica.setNumB(b);
+        System.out.println("El valor mayor es: " + Matematica.devolverMayor());
+        System.out.println("El valor mayor elevado al valor menor: "
+                + Matematica.redondear(Matematica.devolverMayor(),2)+ "^"
+                + Matematica.redondear(Matematica.devolverMenor(),2) +" = "
+                + Matematica.calcularPotencia());
+        System.out.println("La raíz del valor menor es: " + Matematica.calculaRaiz());
+
 
     }
 }
