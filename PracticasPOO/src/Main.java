@@ -1,4 +1,5 @@
 import Entity.*;
+import Service.ArregloService;
 import Service.PersonaService;
 import Utils.Read;
 import Utils.Write;
@@ -144,7 +145,7 @@ public class Main {
         //Ejercicio 9
         //Matematica matematica = new Matematica(Math.random(),Math.random());
 
-        double a = Math.random();
+        /*double a = Math.random();
         double b = Math.random();
         Matematica.setNumA(a);
         Matematica.setNumB(b);
@@ -153,8 +154,23 @@ public class Main {
                 + Matematica.redondear(Matematica.devolverMayor(),2)+ "^"
                 + Matematica.redondear(Matematica.devolverMenor(),2) +" = "
                 + Matematica.calcularPotencia());
-        System.out.println("La raíz del valor menor es: " + Matematica.calculaRaiz());
+        System.out.println("La raíz del valor menor es: " + Matematica.calculaRaiz());*/
 
+        //Ejercicio 10
+        //IMPORTANTE: NO USÉ LA CLASE ARRAY PORQUE NO LO VI :(
+        double[] arregloA = new double[50];
+        double[] arregloB = new double[20];
 
+        ArregloService.inicializar(arregloA);
+        System.out.println("Arreglo A inicializado:");
+        ArregloService.imprimirArreglo(arregloA);
+        arregloA = ArregloService.ordenarArreglo(arregloA);
+        System.out.println("Arreglo A ordenado:");
+        ArregloService.imprimirArreglo(arregloA);
+        ArregloService.llenarArreglo(arregloB, arregloA);
+        System.out.println("Arreglo B inicializado:");
+        ArregloService.imprimirArreglo(arregloB);
+        System.out.println("Arreglo A ordenado luego de llenar B:");
+        ArregloService.imprimirArreglo(arregloA);
     }
 }
