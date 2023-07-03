@@ -15,6 +15,7 @@ public class Pelicula {
         this.genero = genero;
         this.anio = anio;
         this.duracionMinutos = duracionMinutos;
+        System.out.println("Pelicula cargada.");
     }
 
     public String getTitulo() {
@@ -51,6 +52,7 @@ public class Pelicula {
 
     @Override
     public String toString() {
-        return "Pelicula{" + "titulo='" + titulo  + ", genero='" + genero  + ", anio=" + anio + ", duracionMinutos=" + duracionMinutos + '}';
+        return "Pelicula {" + " titulo = " + titulo  + ", genero = " + genero  + ", año = " + anio
+                + ", duracionMinutos = " + duracionMinutos + " min }";
     }
 }

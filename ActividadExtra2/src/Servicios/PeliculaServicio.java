@@ -10,8 +10,8 @@ public class PeliculaServicio {
     static Pelicula[] peliculasDisponibles = new Pelicula[100]; // [............La momia,null,null]  Peliculas
 
 
-    public static Pelicula crearPelicula(){
-        /*System.out.println("Ingrese el título de la película:");
+    private static Pelicula crearPelicula(){
+        System.out.println("Ingrese el título de la película:");
         String titulo = leer.nextLine();
         System.out.println("Ingrese el genero de la película:");
         String genero = leer.nextLine();
@@ -22,15 +22,20 @@ public class PeliculaServicio {
 
         // Pelicula peli - new Pelicula(titulo, genero, anio, duracionMinutos);
         // return  peli;
-        return new Pelicula(titulo, genero, anio, duracionMinutos);*/
-        return new Pelicula("la momia","acción",1999,124);
+        return new Pelicula(titulo, genero, anio, duracionMinutos);
+        //return new Pelicula("la momia","accion",1999,124);
     }
 
     public static void listarPeliculas(){
+        boolean hayDisponibles = false;
         for(int i = 0; i < peliculasDisponibles.length; i++){
             if(peliculasDisponibles[i] != null){
                 System.out.println(peliculasDisponibles[i].toString());
+                hayDisponibles = true;
             }
+        }
+        if(!hayDisponibles){
+            System.out.println("No hay películas disponibles.");
         }
     }
 
@@ -52,8 +57,9 @@ public class PeliculaServicio {
         boolean existente = false;
         for(int i = 0; i < peliculasDisponibles.length; i++){
 
-            if(peliculasDisponibles[i] != null && peliculasDisponibles[i].getTitulo() == titulo){
-                System.out.println("Existe la película.");
+            if(peliculasDisponibles[i] != null && titulo.equals(peliculasDisponibles[i].getTitulo())){
+                System.out.println("Existe la película de este título y es:");
+                System.out.println(peliculasDisponibles[i].toString());
                 existente = true;
                 i = peliculasDisponibles.length;
             }
@@ -68,8 +74,9 @@ public class PeliculaServicio {
         boolean existente = false;
         for(int i = 0; i < peliculasDisponibles.length; i++){
 
-            if(peliculasDisponibles[i].getGenero() == genero){
-                System.out.println("Existe la película de este género.");
+            if(peliculasDisponibles[i] != null && genero.equals(peliculasDisponibles[i].getGenero())){
+                System.out.println("Existe la película de este género y es:");
+                System.out.println(peliculasDisponibles[i].toString());
                 existente = true;
                 i = peliculasDisponibles.length;
             }

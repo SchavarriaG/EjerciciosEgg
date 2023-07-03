@@ -1,5 +1,6 @@
 package Entidades;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Alquiler {
@@ -52,11 +53,12 @@ public class Alquiler {
 
     @Override
     public String toString() {
-        return "Alquiler{" +
-                "peliculaAlquilada='" + peliculaAlquilada + '\'' +
-                ", fechaInicio=" + fechaInicio +
-                ", fechaFin=" + fechaFin +
-                ", precio=" + precio +
-                '}';
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+        return "Alquiler { " +
+                " peliculaAlquilada = '" + peliculaAlquilada + '\'' +
+                ", fechaInicio = " + formatoFecha.format(fechaInicio) +
+                ", fechaFin = " + formatoFecha.format(fechaFin) +
+                ", precio = " + precio +
+                " $ }";
     }
 }
