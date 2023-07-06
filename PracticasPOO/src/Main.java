@@ -1,6 +1,4 @@
 import Entity.*;
-import Service.ArregloService;
-import Service.PersonaService;
 import Utils.Read;
 import Utils.Write;
 
@@ -158,7 +156,7 @@ public class Main {
 
         //Ejercicio 10
         //IMPORTANTE: NO USÉ LA CLASE ARRAY PORQUE NO LO VI :(
-        double[] arregloA = new double[50];
+        /*double[] arregloA = new double[50];
         double[] arregloB = new double[20];
 
         ArregloService.inicializar(arregloA);
@@ -171,6 +169,21 @@ public class Main {
         System.out.println("Arreglo B inicializado:");
         ArregloService.imprimirArreglo(arregloB);
         System.out.println("Arreglo A ordenado luego de llenar B:");
-        ArregloService.imprimirArreglo(arregloA);
+        ArregloService.imprimirArreglo(arregloA);*/
+
+        //Ejercicio 11
+        // Descomentar si desea preguntarle al usuario
+        // PracticaOnce.inicializarConUsuario();
+        //PracticaOnce.inicializarSinUsuario(2022,12,12);
+
+        //Ejercicio 12
+        PersonaV2 persona = PersonaV2.crearPersona();
+        Write.withLineBreak("La edad de "+ persona.getNombre() + " es "
+                + persona.calcularEdad() + " años.");
+        Write.withLineBreak("Ingrese una edad: ");
+        int anios = Read.integer();
+        Write.withLineBreak("La edad de " + persona.getNombre() + " "
+                + ((persona.menorQue(anios))? "si" : "no") +" es menor que " + anios + " años.");
+        Write.withLineBreak(persona.mostrarPersona());
     }
 }
