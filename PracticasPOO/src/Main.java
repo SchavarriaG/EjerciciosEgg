@@ -1,6 +1,4 @@
-import Entity.*;
-import Utils.Read;
-import Utils.Write;
+import Entity.Curso;
 
 public class Main {
     public static void main(String[] args) {
@@ -177,13 +175,17 @@ public class Main {
         //PracticaOnce.inicializarSinUsuario(2022,12,12);
 
         //Ejercicio 12
-        PersonaV2 persona = PersonaV2.crearPersona();
+        /*PersonaV2 persona = PersonaV2.crearPersona();
         Write.withLineBreak("La edad de "+ persona.getNombre() + " es "
                 + persona.calcularEdad() + " años.");
         Write.withLineBreak("Ingrese una edad: ");
         int anios = Read.integer();
         Write.withLineBreak("La edad de " + persona.getNombre() + " "
                 + ((persona.menorQue(anios))? "si" : "no") +" es menor que " + anios + " años.");
-        Write.withLineBreak(persona.mostrarPersona());
+        Write.withLineBreak(persona.mostrarPersona());*/
+
+        //Ejercicios 13
+        Curso curso = Curso.crearCurso();
+        curso.calcularGananciaSemanal();
     }
 }

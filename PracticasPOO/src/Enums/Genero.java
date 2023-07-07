@@ -1,20 +1,21 @@
 package Enums;
 
 public enum Genero {
-     FEMENINO("Femenino", 1), MASCULINO("Masculino",2), OTRO("Otro", 3);
+    FEMENINO("Femenino", 1), MASCULINO("Masculino", 2), OTRO("Otro", 3);
 
     private String genero;
     private int orden;
+
     Genero(String genero, int orden) {
         this.genero = genero;
         this.orden = orden;
     }
 
-    public String getGenero(){
+    public String getGenero() {
         return genero;
     }
 
-    public int getOrden(){
+    public int getOrden() {
         return orden;
     }
 
