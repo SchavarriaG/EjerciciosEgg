@@ -4,6 +4,8 @@ import Enums.Turno;
 import Utils.Read;
 import Utils.Write;
 
+import java.util.Arrays;
+
 public class Curso {
     private String nombreCurso;
     private int cantidadHorasPorDia;
@@ -66,8 +68,9 @@ public class Curso {
 
         Write.withLineBreak("Escriba el precio por hora: ");
         double precio = Read.integer();
+
         Write.withLineBreak("Escriba el nombre de los alumnos: ");
-        return new Curso(nombre,dia,semana,turno,20, cargarAlumnos());
+        return new Curso(nombre,dia,semana,turno,precio, cargarAlumnos());
     }
 
     public void calcularGananciaSemanal(){
@@ -119,5 +122,17 @@ public class Curso {
 
     public void setAlumnos(String[] alumnos) {
         this.alumnos = alumnos;
+    }
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "nombreCurso='" + nombreCurso + '\'' +
+                ", cantidadHorasPorDia=" + cantidadHorasPorDia +
+                ", cantidadDiaPorSemana=" + cantidadDiaPorSemana +
+                ", turno=" + turno.getValue() +
+                ", precioPorHora=" + precioPorHora +
+                ", alumnos=" + Arrays.toString(alumnos) +
+                '}';
     }
 }

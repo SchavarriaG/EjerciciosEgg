@@ -1,32 +1,19 @@
+import Ejercicios.Ejercicio1;
+import Ejercicios.Prueba;
 import Entity.Curso;
+import Entity.Movil;
 
 public class Main {
     public static void main(String[] args) {
 
-        //Person persona1 = new Person();
-        //Person persona2 = new Person("Pedro");
-
-        //persona1.setName("Mariana");
-        //System.out.println("Hola " + persona1.getName());
-        //System.out.println("Hola " + persona2.getName());
-
-        //PersonService personService = new PersonService();
-        //Person persona3 = personService.createPerson();
-        //personService.getPersonName(persona3);
+        //Prueba
+        //Prueba.inicializar();
 
         //Ejercicio 1
-        // Creación de objeto por medio del servicio
-        /*
-        LibroService libroService = new LibroService();
-        Libro libro1 = libroService.cargarLibro();
-        libroService.verLibro(libro1);
-
-        // Creación de objeto por medio del servicio pero con método estático
-        Libro libro2 = LibroService.cargarLibroEstatico();
-        LibroService.verLibroEstatico(libro2);
+        //Ejercicio1.inicializar();
 
         //Ejercicio 2
-        Circunferencia c1 = new Circunferencia();
+        /*Circunferencia c1 = new Circunferencia();
         c1.crearCircunferencia();
         Write.withLineBreak("El área del círculo es: "  + c1.calcularArea());
         Write.withLineBreak("El perímetro del círculo es: "  + c1.calcularPerimetro());
@@ -184,8 +171,19 @@ public class Main {
                 + ((persona.menorQue(anios))? "si" : "no") +" es menor que " + anios + " años.");
         Write.withLineBreak(persona.mostrarPersona());*/
 
-        //Ejercicios 13
-        Curso curso = Curso.crearCurso();
-        curso.calcularGananciaSemanal();
+        //Ejercicio 13
+        Curso curso1 = Curso.crearCurso();
+        curso1.calcularGananciaSemanal();
+        System.out.println(curso1.toString());
+        Curso curso2 = Curso.crearCurso();
+        curso2.calcularGananciaSemanal();
+        System.out.println(curso2.toString());
+
+        //Ejercicio 14
+        Movil movil1 = Movil.cargarCelular();
+        System.out.println(movil1.toString());
+        Movil movil2 = Movil.cargarCelular();
+        System.out.println(movil2.toString());
+
     }
 }
