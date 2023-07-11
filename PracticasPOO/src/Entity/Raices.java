@@ -16,36 +16,39 @@ public class Raices {
         this.c = c;
     }
 
-    public double obtenerDiscriminante(){
+    private double obtenerDiscriminante(){
         return Math.pow(b,2) - 4*a*c;
     }
 
-    public boolean tieneRaices(){
-        return obtenerDiscriminante() >= 0;
+    private boolean tieneRaices(){
+        return obtenerDiscriminante() > 0;
     }
 
-    public boolean tieneRaiz(){
+    private boolean tieneRaiz(){
         return obtenerDiscriminante() == 0;
     }
 
-    public void obtenerRaices(){
+    private void obtenerRaices(){
         if(tieneRaices()){
             Write.withLineBreak("Las raices de la ecuación de segundo grado " + this
-                    +" son: X1= " + ( (-b + Math.sqrt(Math.pow(b,2) -(4*a*c)) ) /(2*a))
-                    + " y X2= "   + ( (-b - Math.sqrt(Math.pow(b,2) -(4*a*c)) ) /(2*a))    );
-        }else{
-            Write.withLineBreak("No tiene dos raices.");
+                    +" son: X1= " + ( Math.round((-b + Math.sqrt(Math.pow(b,2) -(4*a*c)) ) /(2*a)*100)/100.0 )
+                    + " y X2= "   + ( Math.round((-b - Math.sqrt(Math.pow(b,2) -(4*a*c)) ) /(2*a)*100)/100.0 )  );
+        }else {
+            obtenerRaiz();
         }
     }
 
-    public void obtenerRaiz(){
-        if(tieneRaices()){
-            Write.withLineBreak("Las raiz de la ecuación de segundo grado " + this +" es 0.");
+    private void obtenerRaiz(){
+        if(tieneRaiz()){
+            Write.withLineBreak("Tiene una raiz la ecuación de segundo grado " + this +" y es "+ (-b/(2*a)));
         }else{
-            Write.withLineBreak("No tiene dos raices.");
+            Write.withLineBreak("No tiene solución.");
         }
     }
 
+    public void calcular(){
+        obtenerRaices();
+    }
 
     public String toString(){
         return a + "x^2 + "+ b+"x + "+c;
