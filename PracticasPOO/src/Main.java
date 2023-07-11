@@ -10,11 +10,12 @@ public class Main {
 
         boolean salir = false;
         do {
-            Write.withLineBreak(" ");
-            Write.withLineBreak("Escriba el número del ejercicio a probar,");
-            Write.withLineBreak("para los extras \"e1\" y para la prueba \"prueba\",");
-            Write.withLineBreak("para salir escriba \"salir\" :");
-            switch (Read.text()){
+            Write.withLineBreak("=============================================== ");
+            Write.withLineBreak("Escriba el número del ejercicio a probar. ");
+            Write.withLineBreak("- Para los extras escriba \"e1\" y para la prueba escriba \"prueba\".");
+            Write.withLineBreak("- Para salir escriba \"salir\" .");
+            Write.withLineBreak("=============================================== ");
+            switch (Read.text().toLowerCase()){
                 case "prueba":
                     Prueba.inicializar();
                     break;
