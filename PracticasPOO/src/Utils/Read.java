@@ -12,7 +12,9 @@ public class Read {
     }
 
     public static long integerLarge(){
-        return scanner.nextLong();
+        long largo = scanner.nextLong();
+        scanner.nextLine();
+        return largo;
     }
 
     public static String text(){
