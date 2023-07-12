@@ -4,11 +4,14 @@ import Utils.Read;
 import Utils.Write;
 
 import java.lang.reflect.Constructor;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException {
 
-        boolean salir = false;
+       boolean salir = false;
         do {
             Write.withLineBreak("=============================================== ");
             Write.withLineBreak("Escriba el número del ejercicio a probar. ");
@@ -87,5 +90,16 @@ public class Main {
             }
         } while(!salir);
 
+        /*int anio = Read.integer();
+        int mes = Read.integer();
+        int dia = Read.integer();*//*
+
+        Calendar fecha = new GregorianCalendar();
+        //Date date = new Date();
+        //fecha.setTime(date);
+
+        fecha.set(2014, Calendar.MARCH, 15);
+        System.out.println(fecha.get(Calendar.YEAR) + "/" +(fecha.get(Calendar.MONTH)) + "/" + fecha.get(Calendar.DATE));
+*/
     }
 }
