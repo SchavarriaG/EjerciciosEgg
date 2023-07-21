@@ -12,7 +12,6 @@ public class Ahorcado {
     private ArrayList<String> letrasUsadas = new ArrayList<>();
     private int intentosExitosos;
     private int intentosFallidos;
-    private static final int intentos = 7;
 
     public Ahorcado() {
     }
